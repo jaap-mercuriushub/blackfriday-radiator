@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Black Friday: Evolar Slimme Olieradiator WiFi – 9 ribben, 2000W, Taupe | nu €99,96</title>
+<meta name="description" content="Black Friday bij Evolar: de slimme olieradiator met WiFi (9 ribben, 2000W, taupe) nu €99,96 in plaats van €124,95. Bedien hem met app, paneel of afstandsbediening. Voor 20:00 besteld, vandaag verzonden.">
+<meta property="og:title" content="Black Friday: Evolar Slimme Olieradiator WiFi – nu €99,96">
+<meta property="og:description" content="Warmte die blijft hangen. 9 ribben, 2000W, WiFi, kantelbeveiliging. 20% Black Friday-korting.">
+<meta property="og:image" content="https://www.evolarshop.nl/media/catalog/product/cache/7f258d7a0cae3a3d21f59ebcf15ea150/e/v/evo-or9-mokw__6_1.png">
+<meta name="theme-color" content="#0d1a23">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23E8871E'/%3E%3Ctext x='32' y='45' font-family='Arial' font-weight='800' font-size='38' text-anchor='middle' fill='white'%3Ee%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="loader" aria-hidden="true">
+  <div class="loader-dial">
+    <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" class="track"/><circle cx="60" cy="60" r="52" class="bar" id="loaderBar"/></svg>
+    <div class="loader-temp"><span id="loaderTemp">15</span><small>°C</small></div>
+  </div>
+  <p>Radiator wordt opgewarmd…</p>
+</div>
+
+<!-- Black Friday top bar -->
+<div class="topbar" role="region" aria-label="Black Friday actie">
+  <span class="tb-tag">BLACK FRIDAY</span>
+  <span class="tb-text">20% korting op deze radiator, nog <strong id="countdown">–</strong></span>
+</div>
+
+<header class="site-header">
+  <a class="logo" href="https://www.evolarshop.nl/?utm_source=bf-landing&utm_medium=landingpage&utm_campaign=blackfriday2026" aria-label="Evolar homepage">
+    <svg viewBox="0 0 475 90" role="img" aria-label="Evolar"><path fill="currentColor" d="M43.888 82.392c-3.487 1.45-7.335 2.174-11.303 2.174-6.493 0-11.904-1.69-16.473-5.072-4.569-3.38-7.695-7.97-9.138-13.766L60 55.343c-.36-5.554-1.683-10.505-4.329-14.973-2.645-4.468-6.132-7.97-10.46-10.506C40.88 27.328 35.95 26 30.54 26c-5.892 0-11.182 1.45-15.751 4.106-4.69 2.777-8.297 6.52-10.942 11.35C1.202 46.287 0 51.843 0 58c0 6.28 1.323 11.713 4.088 16.543 2.766 4.83 6.613 8.695 11.543 11.351C20.561 88.672 26.092 90 32.465 90c4.81 0 9.258-.845 13.467-2.536 3.968-1.69 7.455-4.226 10.22-7.728l-3.487-3.985c-2.404 3.019-5.29 5.192-8.777 6.641ZM17.796 34.694c3.727-2.173 7.935-3.38 12.745-3.38 4.088 0 7.936.965 11.303 2.777 3.366 1.81 6.012 4.347 8.176 7.366 2.044 3.14 3.367 6.641 3.968 10.385L6.132 61.26c-.24-1.57-.24-2.777-.24-3.743 0-4.951.962-9.54 3.126-13.525 2.044-3.984 4.93-7.124 8.778-9.298ZM154 27h-6.155L122.5 83.362 97.397 27H91l28.362 63h6.155zM199.328 85.894C204.155 88.672 209.466 90 215.5 90c5.914 0 11.224-1.328 16.052-4.106 4.827-2.656 8.569-6.52 11.345-11.35C245.552 69.713 247 64.157 247 58c0-6.038-1.448-11.592-4.103-16.423-2.776-4.83-6.518-8.694-11.345-11.471C226.724 27.449 221.414 26 215.5 26c-6.034 0-11.345 1.45-16.172 4.106-4.828 2.777-8.57 6.641-11.225 11.471C185.328 46.407 184 51.962 184 58c0 6.158 1.328 11.713 4.103 16.543 2.656 4.83 6.397 8.695 11.225 11.351Zm29.086-4.71c-3.862 2.295-8.086 3.382-12.914 3.382-4.828 0-9.172-1.087-13.034-3.381-3.863-2.174-6.88-5.313-9.052-9.419-2.173-3.985-3.259-8.574-3.259-13.766 0-5.072 1.086-9.66 3.259-13.766 2.172-3.985 5.19-7.125 9.052-9.419 3.862-2.173 8.206-3.381 13.034-3.381 4.828 0 9.052 1.208 12.914 3.381 3.862 2.294 6.88 5.434 9.052 9.419 2.172 4.106 3.379 8.694 3.379 13.766 0 5.192-1.207 9.781-3.38 13.766-2.172 4.106-5.19 7.245-9.051 9.419ZM291 0v90h6V0zM387.745 32.038C383.535 28.053 377.521 26 369.823 26c-4.811 0-9.502.845-13.832 2.415-4.45 1.57-8.18 3.743-11.307 6.52l3.007 4.348c2.646-2.415 5.774-4.347 9.623-5.796 3.849-1.45 7.818-2.174 12.028-2.174 6.014 0 10.705 1.57 13.833 4.589 3.127 3.14 4.81 7.607 4.81 13.404v5.071h-21.53c-8.18 0-14.193 1.69-17.922 4.951-3.729 3.26-5.533 7.487-5.533 12.68 0 5.434 1.925 9.78 6.014 13.041 4.09 3.381 9.623 4.951 16.6 4.951 5.292 0 9.983-.966 13.832-3.019s6.736-4.95 8.78-8.694v11.23H394v-39.97c0-7.728-2.165-13.524-6.255-17.51Zm-8.059 49.388c-3.608 2.416-8.059 3.623-13.23 3.623-5.534 0-9.864-1.087-12.871-3.502-3.127-2.415-4.57-5.675-4.57-9.781 0-3.864 1.322-7.004 4.089-9.298 2.766-2.174 7.217-3.381 13.471-3.381h21.41V70.92c-1.924 4.588-4.69 8.09-8.299 10.505ZM459.94 29.713c-4.13 2.395-7.167 5.869-9.11 10.42V26.48H445V89h6.073V56.422c0-7.665 1.943-13.774 5.951-18.085 3.887-4.312 9.474-6.588 16.519-6.588l1.457.12V26c-5.951 0-10.931 1.317-15.06 3.713Z"/></svg>
+  </a>
+  <nav class="hdr-nav" aria-label="Pagina">
+    <a href="#story">Ontdek</a>
+    <a href="#specs">Specificaties</a>
+    <a href="#faq">Vragen</a>
+  </nav>
+  <a class="btn btn-sm cta" data-cta="header" href="#">Bestel voor €99,96</a>
+</header>
+
+<main>
+<!-- ===== SCROLL STORY ===== -->
+<section id="story" aria-label="Productverhaal">
+  <div class="stage">
+    <canvas id="gl" aria-hidden="true"></canvas>
+    <img class="gl-fallback" src="https://www.evolarshop.nl/media/catalog/product/cache/b9ec424d49a23b92f928c6813f0f2316/e/v/evo-or9-mokw__6_1.png" alt="Evolar slimme olieradiator met WiFi, 9 ribben, taupe">
+    <div class="vignette"></div>
+
+    <!-- progress rail -->
+    <ol class="rail" aria-hidden="true">
+      <li data-i="0"><span>Intro</span></li>
+      <li data-i="1"><span>Warmte</span></li>
+      <li data-i="2"><span>Precisie</span></li>
+      <li data-i="3"><span>Slim</span></li>
+      <li data-i="4"><span>Veilig</span></li>
+      <li data-i="5"><span>Kleur</span></li>
+    </ol>
+
+    <!-- Panel 0 -->
+    <article class="panel p0" data-panel="0">
+      <span class="eyebrow"><i class="dot"></i> Black Friday · alleen t/m 30 november</span>
+      <h1>Warmte die <em>blijft hangen</em>.</h1>
+      <p class="lead">De slimme olieradiator van Evolar. 9 ribben, 2000 watt, WiFi. In stijlvol taupe.</p>
+      <div class="price-row">
+        <span class="was">€124,95</span>
+        <span class="now">€99,96</span>
+        <span class="badge">-20%</span>
+      </div>
+      <div class="btn-row">
+        <a class="btn cta" data-cta="hero" href="#">Pak de deal <span aria-hidden="true">→</span></a>
+        <a class="btn ghost" href="#offer">Bekijk alles</a>
+      </div>
+      <p class="micro">✓ Voor 20:00 besteld, vandaag verzonden &nbsp; ✓ Gratis retour binnen 14 dagen</p>
+      <div class="scroll-hint" aria-hidden="true"><span></span>Scroll om hem op te warmen</div>
+    </article>
+
+    <!-- Panel 1 -->
+    <article class="panel p1" data-panel="1">
+      <span class="eyebrow">01 · Stralingswarmte</span>
+      <h2><span class="big-num" data-count="9">9</span> ribben.<br><span class="big-num" data-count="2000">2000</span> watt.</h2>
+      <p>Olie houdt warmte vast. Zet je hem uit, dan straalt hij nog even na. Gelijkmatige, behaaglijke warmte in plaats van een hete luchtstroom.</p>
+      <ul class="chips"><li>3 standen</li><li>Bijverwarming</li><li>Vanaf 5 m²</li></ul>
+    </article>
+
+    <!-- Panel 2 -->
+    <article class="panel p2" data-panel="2">
+      <span class="eyebrow">02 · Thermostaat & timer</span>
+      <h2>Tussen <span class="temp-live"><b id="tempLive">15</b>°C</span><br>en jouw ideale warmte.</h2>
+      <p>Kies een temperatuur tussen 15 en 35 °C. Het digitale display laat de kamertemperatuur zien. De timer zet hem na 1 tot 24 uur vanzelf uit.</p>
+      <div class="dial-track"><div class="dial-fill" id="dialFill"></div><span>15°</span><span>35°</span></div>
+    </article>
+
+    <!-- Panel 3 -->
+    <article class="panel p3" data-panel="3">
+      <span class="eyebrow">03 · WiFi</span>
+      <h2>Warm thuiskomen?<br><em>Zet hem onderweg aan.</em></h2>
+      <p>Bedien de radiator met de Evolar/Tuya-app, de afstandsbediening of het paneel. Temperatuur, stand en timer: alles vanaf je telefoon.</p>
+      <ul class="chips"><li>📱 App</li><li>🎛️ Paneel</li><li>📡 Afstandsbediening</li></ul>
+    </article>
+
+    <!-- Panel 4 -->
+    <article class="panel p4" data-panel="4">
+      <span class="eyebrow">04 · Veiligheid</span>
+      <h2>Valt hij om?<br><em>Dan stopt hij.</em></h2>
+      <p>Kantelbeveiliging en oververhittingsbeveiliging zitten er standaard in. Dankzij de zwenkwielen en het handvat verplaats je hem makkelijk (wel eerst uitzetten en laten afkoelen).</p>
+      <ul class="chips"><li>Kantelbeveiliging</li><li>Oververhittingsbeveiliging</li><li>Zwenkwielen</li></ul>
+    </article>
+
+    <!-- Panel 5 -->
+    <article class="panel p5" data-panel="5">
+      <span class="eyebrow">05 · Past in elk interieur</span>
+      <h2>Verwarming die je <em>niet wilt verstoppen</em>.</h2>
+      <p>Deze deal geldt voor de taupe uitvoering met 9 ribben. De radiator is er ook in mokka, groen en grijs, en met 7 of 11 ribben.</p>
+      <div class="swatches" role="list">
+        <span role="listitem" class="sw" data-sw="0" style="--c:#b3a597">Taupe</span>
+        <span role="listitem" class="sw" data-sw="1" style="--c:#6e5646">Mokka</span>
+        <span role="listitem" class="sw" data-sw="2" style="--c:#647a64">Groen</span>
+        <span role="listitem" class="sw" data-sw="3" style="--c:#8e9398">Grijs</span>
+      </div>
+      <a class="btn cta" data-cta="story-end" href="#">Bestel de taupe voor €99,96 <span aria-hidden="true">→</span></a>
+    </article>
+
+    <!-- Overlays driven by the story -->
+    <div class="phone" id="phone" aria-hidden="true">
+      <div class="phone-notch"></div>
+      <div class="app">
+        <div class="app-top"><span>Woonkamer</span><span class="wifi-ok">● Verbonden</span></div>
+        <div class="app-ring"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="42" class="r-track"/><circle cx="50" cy="50" r="42" class="r-bar" id="appRing"/></svg><div><b id="appTemp">21</b><small>°C</small><span>Doel</span></div></div>
+        <div class="app-modes"><span>Laag</span><span>Midden</span><span class="on">Hoog</span></div>
+        <div class="app-row"><span>⏱ Timer</span><b>4 uur</b></div>
+        <div class="app-row"><span>🔥 Aan om</span><b>17:30</b></div>
+        <div class="app-btn">Aan</div>
+      </div>
+    </div>
+    <div class="alert" id="alert" aria-hidden="true">
+      <div class="alert-ico">⛨</div>
+      <div><b>Kantelbeveiliging actief</b><span>Radiator automatisch uitgeschakeld</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== OFFER ===== -->
+<section id="offer" class="offer">
+  <div class="wrap offer-grid">
+    <div class="offer-media">
+      <div class="ribbon">BLACK FRIDAY</div>
+      <img src="https://www.evolarshop.nl/media/catalog/product/cache/b9ec424d49a23b92f928c6813f0f2316/e/v/evo-or9-mokw__6_1.png" alt="Evolar slimme olieradiator 9 ribben met digitaal display en zwenkwielen" loading="lazy" width="598" height="598">
+    </div>
+    <div class="offer-body">
+      <span class="eyebrow dark">Evolar · Rechtstreeks van de fabrikant</span>
+      <h2>Slimme olieradiator met WiFi<br><small>9 ribben · 2000W · Taupe</small></h2>
+      <div class="price-block">
+        <div><span class="was">€124,95</span><span class="now">€99,96</span></div>
+        <div class="save">Je bespaart <b>€24,99</b></div>
+      </div>
+      <div class="timer-box" aria-live="polite">
+        <span>Black Friday-prijs geldig nog</span>
+        <div class="timer" id="timerBig"><div><b data-u="d">0</b><small>dagen</small></div><div><b data-u="h">0</b><small>uur</small></div><div><b data-u="m">0</b><small>min</small></div><div><b data-u="s">0</b><small>sec</small></div></div>
+      </div>
+      <ul class="usp">
+        <li><b>Op voorraad</b>: voor 20:00 besteld, vandaag verzonden</li>
+        <li><b>Gratis verzending</b> vanaf €50</li>
+        <li><b>Gratis retourneren</b> binnen 14 dagen</li>
+        <li><b>2 jaar garantie</b></li>
+      </ul>
+      <a class="btn cta xl" data-cta="offer" href="#">Bestel nu met 20% korting <span aria-hidden="true">→</span></a>
+      <div class="pay" aria-label="Betaalmethoden">iDEAL | Wero · Klarna · PayPal · Visa · Mastercard · Bancontact · Apple Pay</div>
+      <p class="fine">Art.nr. EVO-OR9TAU-W · EAN 8721667200252 · Prijs incl. btw.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY ===== -->
+<section class="why">
+  <div class="wrap">
+    <h2 class="sec-title">Waarom deze radiator?</h2>
+    <div class="cards">
+      <div class="card tilt"><div class="ico">♨️</div><h3>Warmte die nablijft</h3><p>De olie blijft warm. Ook na het uitschakelen geeft hij nog even warmte af.</p></div>
+      <div class="card tilt"><div class="ico">📲</div><h3>Drie manieren om te bedienen</h3><p>App via WiFi (2,4 GHz), afstandsbediening of het digitale paneel.</p></div>
+      <div class="card tilt"><div class="ico">🎯</div><h3>Precies jouw temperatuur</h3><p>Thermostaat van 15 tot 35 °C, 3 standen en een timer van 1 tot 24 uur.</p></div>
+      <div class="card tilt"><div class="ico">🛡️</div><h3>Veilig ingebouwd</h3><p>Kantel- en oververhittingsbeveiliging. Met zwenkwielen en handvat.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CALCULATOR ===== -->
+<section class="calc">
+  <div class="wrap calc-grid">
+    <div>
+      <h2 class="sec-title left">Wat kost een avondje warmte?</h2>
+      <p class="muted">Bereken het maximale verbruik op de hoogste stand (2000W). Met de thermostaat en een lagere stand verbruik je minder.</p>
+    </div>
+    <div class="calc-box">
+      <label for="hrs">Uren per dag <output id="hrsOut">3</output></label>
+      <input type="range" id="hrs" min="1" max="12" value="3">
+      <label for="kwh">Jouw stroomprijs per kWh (€)</label>
+      <input type="number" id="kwh" value="0.30" step="0.01" min="0" inputmode="decimal">
+      <div class="calc-out">
+        <div><small>Per uur max.</small><b id="cHour">€0,60</b></div>
+        <div><small>Per dag max.</small><b id="cDay">€1,80</b></div>
+      </div>
+      <p class="fine">€0,30 is een voorbeeld; vul je eigen tarief in.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SPECS ===== -->
+<section id="specs" class="specs">
+  <div class="wrap">
+    <h2 class="sec-title">Specificaties</h2>
+    <dl class="spec-grid">
+      <div><dt>Aantal ribben</dt><dd>9</dd></div>
+      <div><dt>Max. vermogen</dt><dd>2000 W</dd></div>
+      <div><dt>Standen</dt><dd>3</dd></div>
+      <div><dt>Temperatuurbereik</dt><dd>15 – 35 °C</dd></div>
+      <div><dt>Timer</dt><dd>1 – 24 uur</dd></div>
+      <div><dt>Bediening</dt><dd>App (WiFi 2,4 GHz), afstandsbediening, paneel</dd></div>
+      <div><dt>Afmetingen (h×b×d)</dt><dd>595 × 405 × 120 mm</dd></div>
+      <div><dt>Gewicht</dt><dd>7,5 kg</dd></div>
+      <div><dt>Kleur</dt><dd>Taupe</dd></div>
+      <div><dt>Snoerlengte</dt><dd>1,5 m</dd></div>
+      <div><dt>Veiligheid</dt><dd>Kantel- en oververhittingsbeveiliging</dd></div>
+      <div><dt>Plaatsing</dt><dd>Vrijstaand op zwenkwielen, binnen</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq" class="faq">
+  <div class="wrap narrow">
+    <h2 class="sec-title">Veelgestelde vragen</h2>
+    <details><summary>Hoe verbind ik de radiator met WiFi?</summary><p>Via de Evolar/Tuya-app. De radiator werkt op 2,4 GHz-WiFi en verbindt in AP-modus. Daarna regel je temperatuur, stand en timer vanaf je telefoon.</p></details>
+    <details><summary>Kan ik hem in de badkamer of aan de muur gebruiken?</summary><p>Nee. De radiator is bedoeld voor binnen in huis, vrijstaand op de meegeleverde wielen. Hij is niet geschikt voor de badkamer of voor wandmontage.</p></details>
+    <details><summary>Voor welke ruimte is hij geschikt?</summary><p>Hij is bedoeld als bijverwarming, voor ruimtes vanaf 5 m² (volgens de handleiding).</p></details>
+    <details><summary>Mag ik hem verplaatsen terwijl hij aan staat?</summary><p>Nee. Gebruik hem altijd rechtop op de wielen. Verplaats hem alleen als hij uit staat en is afgekoeld.</p></details>
+    <details><summary>Wanneer heb ik hem in huis?</summary><p>Bestel je voor 20:00, dan verzenden we hem dezelfde werkdag. Verzending is gratis vanaf €50.</p></details>
+    <details><summary>Wat als hij me toch niet bevalt?</summary><p>Je kunt hem binnen 14 dagen gratis retourneren. Daarnaast krijg je 2 jaar garantie.</p></details>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final">
+  <div class="wrap">
+    <div class="glow-orb" aria-hidden="true"></div>
+    <h2>Deze winter warm.<br><em>Voor €24,99 minder.</em></h2>
+    <a class="btn cta xl" data-cta="final" href="#">Bestel nu voor €99,96 <span aria-hidden="true">→</span></a>
+    <p class="micro light">Black Friday-prijs t/m 30 november · zolang de voorraad strekt</p>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Evolar · JagBa B.V. · Mercuriusstraat 5 A, 6541 BM Nijmegen · KvK 74203894 · Klantenservice 024-2120369 (werkdagen 09:00–17:00)</p>
+    <p><a href="https://www.evolarshop.nl/?utm_source=bf-landing&utm_medium=landingpage&utm_campaign=blackfriday2026">evolarshop.nl</a></p>
+  </div>
+</footer>
+
+<!-- Sticky buy bar -->
+<div class="buybar" id="buybar">
+  <div class="bb-info"><b>Olieradiator WiFi · 9 ribben</b><span><s>€124,95</s> <strong>€99,96</strong></span></div>
+  <a class="btn cta" data-cta="sticky" href="#">Bestel nu</a>
+</div>
+
+<noscript><style>#loader{display:none}</style></noscript>
+<script type="module" src="main.js"></script>
+</body>
+</html>
