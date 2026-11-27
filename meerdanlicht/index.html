@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Black Friday-deal: Lighto LED-kaarsenset 6 stuks, rookgrijs | nu €33,96 | Meerdanlicht</title>
+<meta name="description" content="Black Friday-deal bij Meerdanlicht: Lighto LED-kaarsenset van 6 stuks met echte was, glazen houders in rookgrijs en afstandsbediening. Nu €33,96 in plaats van €39,95.">
+<meta property="og:title" content="Black Friday-deal: Lighto LED-kaarsenset 6 stuks voor €33,96">
+<meta property="og:description" content="Zes kaarsen van echte was in rookgrijs glas, warm wit LED-licht en een afstandsbediening.">
+<meta property="og:image" content="https://d8j0ntlcm91z4.cloudfront.net/user_3GAabZTSn39CfRhhb7tqdkV56nl/hf_20261127_105439_d667b610-a39b-44a7-bcaa-845df9807f38.png">
+<meta name="theme-color" content="#1a1613">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23D4763D'/%3E%3Cpath d='M32 12c5 8 7 12 7 16a7 7 0 0 1-14 0c0-4 2-8 7-16z' fill='white'/%3E%3Crect x='24' y='38' width='16' height='16' rx='3' fill='white'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="frames/d/001.webp" media="(min-width: 860px)">
+<link rel="preload" as="image" href="frames/m/001.webp" media="(max-width: 859px)">
+<link rel="stylesheet" href="../shared/base.css">
+<style>
+:root{
+  --font:'Rubik',system-ui,sans-serif;
+  --ink:#323232; --bg:#ffffff; --surface:#f8f4f0; --line:#ebe3db; --muted:#6f6a66;
+  --brand:#D4763D; --brand-light:#E9A274;
+  --btn:#CC7D4E; --btn-ink:#ffffff;
+  --deal:#BC4ECC; --deal-ink:#ffffff;
+  --stage:#141110; --header-bg:rgba(255,255,255,.95);
+  --glow:rgba(233,162,116,.35);
+  --save-bg:#BC4ECC; --save-ink:#ffffff; --price:#323232;
+  --logo-h:38px; --radius-btn:6px;
+  --shade-l:rgba(14,11,9,.74); --shade-m:rgba(14,11,9,.3);
+}
+#loader p{margin:0;font-size:14px;opacity:.8}
+#loader .ld-logo{background:#fff;border-radius:12px;padding:12px 18px}
+.panel em{font-style:normal;color:var(--brand-light)}
+/* six candles in the UI follow the scroll: each one lights at its own moment */
+.wicks{display:flex;gap:12px;margin:6px 0 20px}
+.wicks span{position:relative;width:30px;height:40px;border-radius:5px;background:linear-gradient(#5b5650,#3d3934);border:1px solid rgba(255,255,255,.18)}
+.wicks span::before{content:"";position:absolute;left:50%;top:-14px;width:10px;height:14px;margin-left:-5px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:radial-gradient(circle at 50% 70%,#fff3c4,#ffb347 55%,transparent 70%);opacity:0;transform:scale(.4);transition:opacity .35s,transform .35s;filter:drop-shadow(0 0 8px #ffb347)}
+.wicks span.on::before{opacity:1;transform:scale(1);animation:flicker 2.4s infinite}
+.wicks span.on{background:linear-gradient(#e9dcc6,#c9b79c)}
+@keyframes flicker{50%{transform:scale(.92) translateY(1px)}}
+.tip{display:flex;gap:12px;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);font-size:14px;line-height:1.5;max-width:460px}
+.tip b{color:var(--brand-light)}
+.slogan{font-weight:500;font-style:italic;opacity:.85}
+.offer-media img{aspect-ratio:1/1;object-fit:cover;width:100%;border-radius:12px}
+.thumbs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.thumbs img{border-radius:12px;border:1px solid var(--line);aspect-ratio:1/1;object-fit:cover;background:#fff}
+.card .ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:#FBEDE3;color:var(--brand);font-size:22px}
+.advice{padding:90px 0;background:#fff}
+.advice .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.advice .item{padding:24px;border-radius:16px;background:var(--surface);border:1px solid var(--line)}
+.advice h3{margin:0 0 8px;font-size:18px}
+.advice p{margin:0;color:var(--muted);line-height:1.6;font-size:15px}
+@media (max-width:860px){.advice .grid{grid-template-columns:1fr}.wicks{gap:9px}.wicks span{width:24px;height:32px}}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+
+<div id="loader" aria-hidden="true">
+  <div class="ld-logo"><img src="https://www.meerdanlicht.nl/static/version1794825463/frontend/Meerdanlicht/default/nl_NL/images/logo.svg" alt="" style="height:36px"></div>
+  <div class="ld-track"><div id="loaderBar"></div></div>
+  <p>De kaarsen worden neergezet <span id="loaderPct">0%</span></p>
+</div>
+
+<div class="topbar" role="region" aria-label="Black Friday-deal">
+  <span class="tag">BLACK FRIDAY-DEAL</span>
+  <span><span class="tb-long">Lighto LED-kaarsenset van €39,95 voor €33,96. </span>Deal loopt nog <strong data-countdown="short">…</strong></span>
+</div>
+
+<header class="site-header">
+  <a class="logo" href="https://www.meerdanlicht.nl/?utm_source=bf-landing&utm_medium=landingpage&utm_campaign=blackfriday2026&utm_content=logo" aria-label="Meerdanlicht homepage">
+    <img src="https://www.meerdanlicht.nl/static/version1794825463/frontend/Meerdanlicht/default/nl_NL/images/logo.svg" alt="Meerdanlicht">
+  </a>
+  <a class="btn cta sm" data-cta="header" href="#">Bekijk de deal</a>
+</header>
+
+<main>
+<section id="story" aria-label="Productverhaal">
+  <div class="stage">
+    <canvas id="seq" role="img" aria-label="Zes LED-kaarsen in rookgrijze glazen houders die een voor een aangaan op een salontafel"></canvas>
+    <div class="shade"></div>
+
+    <article class="panel" data-from="0" data-to="0.18">
+      <span class="label">15% Korting</span>
+      <h1>Het wordt vroeg donker. Tijd voor <em>kaarslicht</em>.</h1>
+      <div class="prices"><span class="was">€39,95</span><span class="now">€33,96</span></div>
+      <p>Lighto LED-kaarsenset van 6 stuks, met echte was in rookgrijs glas. Scroll en steek ze aan.</p>
+      <div class="hint"><i></i> Scroll om aan te steken</div>
+    </article>
+
+    <article class="panel" data-from="0.26" data-to="0.46">
+      <span class="eyebrow ondark">Zes kaarsen, één klik</span>
+      <h2>Aan met de <em>afstandsbediening</em>.</h2>
+      <div class="wicks" id="wicks" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      <p>Geen lucifers en geen gedoe. Je zet de hele set aan vanaf de bank, ook als de kaarsen hoog op de kast staan.</p>
+    </article>
+
+    <article class="panel" data-from="0.54" data-to="0.72">
+      <span class="eyebrow ondark">Echte was, rookgrijs glas</span>
+      <h2>Ziet eruit als een <em>echte kaars</em>.</h2>
+      <div class="tip"><span>💡</span><span><b>Keuzetip:</b> zet de set in een groepje van drie hoog en drie laag. Het rookgrijze glas en het warm witte licht geven samen een rustige, gedempte sfeer.</span></div>
+      <p style="margin-top:16px">Er brandt geen vlam, dus je zet ze ook neer naast gordijnen of planten.</p>
+    </article>
+
+    <article class="panel" data-from="0.8" data-to="1">
+      <span class="label">Bespaar €5,99</span>
+      <h2>Breng meer thuis in huis.</h2>
+      <div class="prices"><span class="was">€39,95</span><span class="now">€33,96</span></div>
+      <p class="micro">Voor 20:30 besteld, morgen in huis. Deal loopt nog <b data-countdown="short">…</b></p>
+      <p><a class="btn cta" data-cta="story-end" href="#">Bestel de kaarsenset</a></p>
+    </article>
+
+    <div class="progress"><div id="storyProgress"></div></div>
+  </div>
+</section>
+
+<section class="offer" id="deal">
+  <div class="wrap offer-grid">
+    <div class="reveal">
+      <div class="offer-media">
+        <span class="label">15% Korting</span>
+        <img src="img/main.webp" alt="Lighto LED-kaarsenset 6 stuks, rookgrijs, met afstandsbediening" loading="lazy">
+      </div>
+      <div class="thumbs">
+        <img src="img/n8.webp" alt="LED-kaarsen in rookgrijze glazen houders" loading="lazy">
+        <img src="img/nl2.webp" alt="Lighto LED-kaarsen in een interieur" loading="lazy">
+      </div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Black Friday-deal · Lighto</span>
+      <h2>Lighto LED-kaarsenset 6 stuks, rookgrijs, warm wit<small>Echte was · glazen houder · met afstandsbediening</small></h2>
+      <div class="price-block">
+        <div><span class="was">€39,95</span><span class="now">€33,96</span></div>
+        <span class="save">15% Korting</span>
+      </div>
+      <div class="timer-box">
+        <span>Deze deal stopt over</span>
+        <div class="timer" data-countdown>
+          <div><b data-u="d">0</b><small>dagen</small></div>
+          <div><b data-u="h">00</b><small>uur</small></div>
+          <div><b data-u="m">00</b><small>min</small></div>
+          <div><b data-u="s">00</b><small>sec</small></div>
+        </div>
+      </div>
+      <ul class="usp">
+        <li>Voor 20:30 besteld, morgen in huis</li>
+        <li>365 dagen bedenktijd</li>
+        <li>Achteraf betalen met Klarna</li>
+        <li>2 jaar garantie</li>
+      </ul>
+      <a class="btn cta xl" data-cta="offer" href="#">Bestel nu voor €33,96</a>
+      <p class="fine">Adviesprijs €39,95. Prijs incl. btw. Deal geldig t/m 30 november 2026, 23:59 uur, zolang de voorraad strekt.</p>
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <div class="wrap">
+    <h2 class="sec-title reveal">Sfeer zonder open vuur</h2>
+    <div class="cards">
+      <div class="card reveal"><div class="ico">❋</div><h3>Echte was</h3><p>De kaarsen hebben een mantel van echte was, voor de look van een gewone kaars.</p></div>
+      <div class="card reveal"><div class="ico">◫</div><h3>Rookgrijs glas</h3><p>Elke kaars staat in een glazen houder in rookgrijs, die mooi bij elkaar staat.</p></div>
+      <div class="card reveal"><div class="ico">☼</div><h3>Warm wit LED</h3><p>Zacht, warm licht voor de woonkamer, zonder roet of druppende was.</p></div>
+      <div class="card reveal"><div class="ico">⌁</div><h3>Afstandsbediening</h3><p>Zet de set aan en uit zonder op te staan van de bank.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="advice">
+  <div class="wrap">
+    <h2 class="sec-title reveal">Waar zet je ze neer?</h2>
+    <div class="grid">
+      <div class="item reveal"><h3>Salontafel</h3><p>Op een dienblad of houten plank vormen de zes kaarsen meteen een rustig middelpunt.</p></div>
+      <div class="item reveal"><h3>Vensterbank</h3><p>Naast het gordijn veilig omdat er geen vlam is. 's Avonds zie je de gloed ook van buiten.</p></div>
+      <div class="item reveal"><h3>Boekenkast</h3><p>Verdeel ze over twee planken en bedien ze met de afstandsbediening, zonder te reiken.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="specs" id="specs">
+  <div class="wrap">
+    <h2 class="sec-title reveal">Specificaties</h2>
+    <dl class="spec-grid reveal">
+      <div><dt>Aantal</dt><dd>6 kaarsen</dd></div>
+      <div><dt>Diameter</dt><dd>7,5 cm</dd></div>
+      <div><dt>Materiaal</dt><dd>Echte was, glazen houder</dd></div>
+      <div><dt>Kleur houder</dt><dd>Rookgrijs</dd></div>
+      <div><dt>Lichtkleur</dt><dd>Warm wit</dd></div>
+      <div><dt>Bediening</dt><dd>Afstandsbediening</dd></div>
+      <div><dt>Batterijen</dt><dd>3× AAA</dd></div>
+      <div><dt>Garantie</dt><dd>2 jaar</dd></div>
+      <div><dt>Artikelnummer</dt><dd>750017</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <h2 class="sec-title reveal">Veelgestelde vragen</h2>
+    <details class="reveal"><summary>Hoe lang loopt de Black Friday-deal?</summary><p>De deal loopt tot en met 30 november 2026, 23:59 uur, zolang de voorraad strekt.</p></details>
+    <details class="reveal"><summary>Hoe zet ik de kaarsen aan?</summary><p>Met de afstandsbediening die bij de set hoort. Zo hoef je niet bij elke kaars langs.</p></details>
+    <details class="reveal"><summary>Welke batterijen heb ik nodig?</summary><p>De kaarsen werken op 3× AAA-batterijen.</p></details>
+    <details class="reveal"><summary>Wanneer heb ik mijn bestelling?</summary><p>Bestel je voor 20:30, dan heb je je kaarsen morgen in huis.</p></details>
+    <details class="reveal"><summary>Kan ik ze terugsturen?</summary><p>Ja, je hebt bij Meerdanlicht 365 dagen bedenktijd.</p></details>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2 class="reveal">Zes kaarsen. Eén klik.<br>Nu voor €33,96.</h2>
+    <a class="btn cta xl reveal" style="max-width:420px" data-cta="final" href="#">Bestel de kaarsenset</a>
+    <p>Deal loopt nog <b data-countdown="short">…</b></p>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">© 2026 Meerdanlicht · Breng meer thuis in huis · Prijzen incl. btw</div>
+</footer>
+
+<div class="buybar" id="buybar">
+  <span><s>€39,95</s><strong>€33,96</strong></span>
+  <a class="btn cta sm" data-cta="buybar" href="#">Bestel nu</a>
+</div>
+
+<noscript><style>#loader{display:none}</style></noscript>
+<script type="module">
+import { initPage } from '../shared/scrub.js';
+initPage({
+  productUrl: 'https://www.meerdanlicht.nl/lighto-led-kaarsenset-6-stuks-rookgrijs-warm-wit-echte-was-glazen-houder-met-afstandsbediening',
+  dealEnd: '2026-11-30T23:59:59+01:00',
+  video: 'https://d8j0ntlcm91z4.cloudfront.net/user_3GAabZTSn39CfRhhb7tqdkV56nl/hf_20261127_105708_965fd27c-4b81-4e97-8f76-f3b9a4128f32.mp4',
+  videoCors: true, frames: 120, mobileFrames: 72, focusX: 0.68, focusY: 0.5,
+  sequence: { d: { count: 121 }, m: { count: 61, focusX: 0.5 } }
+});
+// the six UI candles light one by one, in step with the video
+const wicks = [...document.querySelectorAll('#wicks span')];
+const root = document.documentElement;
+(function light() {
+  const p = parseFloat(getComputedStyle(root).getPropertyValue('--p')) || 0;
+  const t = (p - 0.2) / 0.3;
+  wicks.forEach((w, i) => w.classList.toggle('on', t * wicks.length > i));
+  requestAnimationFrame(light);
+})();
+</script>
+</body>
+</html>

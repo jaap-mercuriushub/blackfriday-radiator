@@ -8,9 +8,10 @@ Higgsfield-assets (job-ID's, video-URL's, prompts): `_overdracht/higgsfield-asse
 ## Repo-indeling
 - Root: de Evolar-pagina (three.js, live op https://evolar-blackfriday-radiator.vercel.app).
 - `shared/scrub.js` + `shared/base.css`: gedeelde scroll-video-engine en layout voor de nieuwe pagina's.
-- Nog te bouwen: `gloeilampgoedkoop/`, `isenvi/`, `meerdanlicht/`, `lighto/` (Duits). Elke map heeft een
+- Shoppagina's: `gloeilampgoedkoop/`, `isenvi/`, `meerdanlicht/`, `lighto/` (Duits). Elke map heeft een
   `index.html` die `../shared/base.css` en `../shared/scrub.js` laadt, de merkvariabelen in `:root` zet
-  en `initPage({...})` aanroept.
+  en `initPage({...})` aanroept. Frames staan in `<map>/frames/{d,m}/` (maak ze met `tools/frames.sh`),
+  geoptimaliseerde productfoto's in `<map>/img/`.
 
 ## Werkafspraken
 - Communiceer in het Nederlands met Jaap. Uitzondering: de Lighto.de-pagina is Duitstalig.
