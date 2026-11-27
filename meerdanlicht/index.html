@@ -13,8 +13,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="frames/d/001.webp" media="(min-width: 860px)">
-<link rel="preload" as="image" href="frames/m/001.webp" media="(max-width: 859px)">
+<link rel="preload" as="image" href="frames/d/001.webp?v=2" media="(min-width: 860px)">
+<link rel="preload" as="image" href="frames/m/001.webp?v=2" media="(max-width: 859px)">
 <link rel="stylesheet" href="../shared/base.css">
 <style>
 :root{
@@ -279,7 +279,7 @@ initPage({
   dealEnd: '2026-11-30T23:59:59+01:00',
   video: 'https://d8j0ntlcm91z4.cloudfront.net/user_3GAabZTSn39CfRhhb7tqdkV56nl/hf_20261127_153203_7891e3cf-24db-4517-bc83-3a64fb87a962.mp4',
   videoCors: true, frames: 120, mobileFrames: 72, focusX: 0.72, focusY: 0.5,
-  sequence: { d: { count: 121 }, m: { count: 61, focusX: 0.5 } }
+  sequence: { v: 2, d: { count: 121 }, m: { count: 61, focusX: 0.5 } }
 });
 // the six UI candles light one by one, in step with the video
 const wicks = [...document.querySelectorAll('#wicks span')];

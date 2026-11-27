@@ -139,7 +139,7 @@ export function initPage(cfg) {
         });
       };
       img.onerror = () => { failed++; done++; res(); };
-      img.src = base + String(i + 1).padStart(3, '0') + '.webp';
+      img.src = base + String(i + 1).padStart(3, '0') + '.webp' + (cfg.sequence.v ? '?v=' + cfg.sequence.v : '');
     });
     await load(0);
     if (!frames[0]) throw new Error('sequence');
