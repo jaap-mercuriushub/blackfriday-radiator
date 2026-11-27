@@ -12,6 +12,10 @@ Higgsfield-assets (job-ID's, video-URL's, prompts): `_overdracht/higgsfield-asse
   `index.html` die `../shared/base.css` en `../shared/scrub.js` laadt, de merkvariabelen in `:root` zet
   en `initPage({...})` aanroept. Frames staan in `<map>/frames/{d,m}/` (maak ze met `tools/frames.sh`),
   geoptimaliseerde productfoto's in `<map>/img/`.
+- Frames worden 1 jaar `immutable` gecachet (`tools/vercel.json`). Vervang je frames, verhoog dan `sequence.v`
+  in `initPage` (en `?v=` in de preload-links), anders zien terugkerende bezoekers de oude animatie.
+- Elke shop staat ook in een eigen repo `jaap-mercuriushub/blackfriday-<shop>` (Vercel: `blackfriday-<shop>.vercel.app`).
+  Wijzig hier, exporteer met `tools/split.sh <shop> <clone>` en push daar naar `main`.
 
 ## Werkafspraken
 - Communiceer in het Nederlands met Jaap. Uitzondering: de Lighto.de-pagina is Duitstalig.
