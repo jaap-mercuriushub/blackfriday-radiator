@@ -39,6 +39,19 @@ export function initPage(cfg) {
   };
   tick(); setInterval(tick, 1000);
 
+  /* ---------- sticky chrome: topbar + header; the stage sits right below ---------- */
+  let hdr = 0;
+  const measure = () => {
+    const tb = document.querySelector('.topbar');
+    const hd = document.querySelector('.site-header');
+    const t = tb ? tb.offsetHeight : 0;
+    hdr = t + (hd ? hd.offsetHeight : 0);
+    document.documentElement.style.setProperty('--tb', t + 'px');
+    document.documentElement.style.setProperty('--hdr', hdr + 'px');
+  };
+  measure();
+  addEventListener('resize', measure);
+
   /* ---------- buy bar ---------- */
   const story = document.getElementById('story');
   const bar = document.getElementById('buybar');
@@ -74,7 +87,7 @@ export function initPage(cfg) {
     const cw = canvas.width, ch = canvas.height;
     const scale = Math.max(cw / sw, ch / sh);
     const dw = sw * scale, dh = sh * scale;
-    const fx = mobile() ? cfg.focusX ?? 0.7 : 0.5;
+    const fx = mobile() ? (seqFocus ?? cfg.focusX ?? 0.7) : 0.5;
     const fy = mobile() ? cfg.focusY ?? 0.5 : 0.5;
     let dx = cw / 2 - dw * fx, dy = ch / 2 - dh * fy;
     dx = Math.min(0, Math.max(cw - dw, dx));
@@ -87,7 +100,43 @@ export function initPage(cfg) {
     if (loaderPct) loaderPct.textContent = Math.round(p) + '%';
   }
 
+  // Preferred path: pre-rendered WebP sequence (cfg.sequence = { d: {count}, m: {count, focusX} }),
+  // served from ./frames/d/001.webp … and ./frames/m/001.webp …
+  let seqFocus = null;
+  async function loadSequence() {
+    const key = mobile() ? 'm' : 'd';
+    const set = cfg.sequence[key];
+    seqFocus = set.focusX ?? null;
+    const n = set.count;
+    const base = (cfg.sequence.base || 'frames/') + key + '/';
+    frames.length = n;
+    let done = 0, failed = 0;
+    const load = i => new Promise(res => {
+      const img = new Image();
+      img.decoding = 'async';
+      img.onload = () => {
+        (img.decode ? img.decode() : Promise.resolve()).catch(() => {}).then(() => {
+          frames[i] = img; done++;
+          if (i === 0) { lastDrawn = -1; render(true); }
+          setProgress((done / n) * 100); res();
+        });
+      };
+      img.onerror = () => { failed++; done++; res(); };
+      img.src = base + String(i + 1).padStart(3, '0') + '.webp';
+    });
+    await load(0);
+    if (!frames[0]) throw new Error('sequence');
+    // load the rest with limited concurrency
+    let next = 1;
+    const worker = async () => { while (next < n) await load(next++); };
+    await Promise.all(Array.from({ length: 6 }, worker));
+    if (failed > n * 0.2) throw new Error('sequence');
+  }
+
   async function extract() {
+    if (cfg.sequence) {
+      try { await loadSequence(); return; } catch (e) { frames.length = 0; seqFocus = null; }
+    }
     video = document.createElement('video');
     video.muted = true; video.playsInline = true; video.preload = 'auto';
     if (cfg.videoCors) video.crossOrigin = 'anonymous';
@@ -122,12 +171,13 @@ export function initPage(cfg) {
       drawCover(video, video.videoWidth, video.videoHeight);
       return;
     }
-    const n = frames.filter(Boolean).length;
+    const n = frames.length;
     if (!n) return;
-    const idx = Math.min(n - 1, Math.round(clamp(current) * (n - 1)));
-    if (idx === lastDrawn && !force) return;
+    let idx = Math.min(n - 1, Math.round(clamp(current) * (n - 1)));
+    while (idx > 0 && !frames[idx]) idx--;          // nearest loaded frame
+    if (!frames[idx] || (idx === lastDrawn && !force)) return;
     const f = frames[idx];
-    drawCover(f, f.width, f.height);
+    drawCover(f, f.naturalWidth || f.width, f.naturalHeight || f.height);
     lastDrawn = idx;
   }
 
@@ -150,7 +200,7 @@ export function initPage(cfg) {
   function storyProgress() {
     const r = story.getBoundingClientRect();
     const total = r.height - innerHeight;
-    return total > 0 ? clamp(-r.top / total) : 0;
+    return total > 0 ? clamp((hdr - r.top) / total) : 0;
   }
 
   if (reduce) {
@@ -158,7 +208,7 @@ export function initPage(cfg) {
     target = current = 1;
   } else if (window.gsap && window.ScrollTrigger) {
     gsap.registerPlugin(ScrollTrigger);
-    ScrollTrigger.create({ trigger: story, start: 'top top', end: 'bottom bottom', scrub: true, onUpdate: s => { target = s.progress; } });
+    ScrollTrigger.create({ trigger: story, start: () => `top ${hdr}px`, end: 'bottom bottom', invalidateOnRefresh: true, scrub: true, onUpdate: s => { target = s.progress; } });
   } else {
     addEventListener('scroll', () => { target = storyProgress(); }, { passive: true });
   }
