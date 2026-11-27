@@ -47,7 +47,7 @@
 .thumbs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
 .thumbs img{border-radius:12px;border:1px solid var(--line);aspect-ratio:1/1;object-fit:cover;background:#fff}
 .card .ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:#FFF1DB;color:var(--brand);font-size:22px}
-.colors{display:flex;gap:8px;align-items:center;font-size:13px;color:var(--muted);margin:-6px 0 18px}
+.colors{text-decoration:none;display:flex;gap:8px;align-items:center;font-size:13px;color:var(--muted);margin:-6px 0 18px}
 .colors i{width:16px;height:16px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px #ccc}
 .claim{font-style:italic;font-weight:500;letter-spacing:.02em}
 @media (max-width:860px){.daybar{height:38px}.big{font-size:60px}}
@@ -130,7 +130,7 @@
     <div class="reveal">
       <span class="eyebrow">Black-Friday-Deal</span>
       <h2>Lighto Solar-Tischleuchte schwarz, 2700 K, IP44, Ø 13 cm<small>Solar und USB-C · Akku 2000 mAh · bis zu 7 Std. Leuchtdauer</small></h2>
-      <div class="colors">Auch erhältlich in <i style="background:#e6dccb"></i> Beige <i style="background:#b8352c"></i> Rot</div>
+      <a class="colors" href="#varianten">Auch erhältlich in <i style="background:#e6dccb"></i> Beige <i style="background:#b8352c"></i> Rot und mit Glasschirm →</a>
       <div class="price-block">
         <div><span class="was">32,99 €</span><span class="now">27,49 €</span></div>
         <span class="save">17% Rabatt</span>
@@ -152,6 +152,53 @@
       </ul>
       <a class="btn cta xl" data-cta="offer" href="#">Jetzt für 27,49 € bestellen</a>
       <p class="fine">Preis inkl. MwSt. Angebot gültig bis 30. November 2026, 23:59 Uhr, solange der Vorrat reicht.</p>
+    </div>
+  </div>
+</section>
+
+<section class="range" id="varianten" data-slider>
+  <div class="wrap">
+    <div class="range-head reveal">
+      <div><span class="eyebrow">Mehr Auswahl</span><h2 class="sec-title">Ihre Farbe, Ihr Moment</h2>
+      <p>Die Solar-Tischleuchte gibt es in Schwarz, Rot und Beige. Lieber einen Glasschirm? Dann wählen Sie die dimmbare Variante mit Rauch- oder Klarglas.</p></div>
+      <div class="slider-nav"><button type="button" data-prev aria-label="Zurück">←</button><button type="button" data-next aria-label="Weiter">→</button></div>
+    </div>
+    <div class="slider">
+      <a class="vcard" href="#deal">
+        <div class="ph"><img src="img/v-schwarz.webp" alt="Solar-Tischleuchte schwarz" loading="lazy"><span class="tag">17% Rabatt</span><span class="here">Diese Seite</span></div>
+        <div class="bd"><h3>Solar-Tischleuchte schwarz</h3><span class="sub">2700 K · IP44 · Ø 13 cm</span>
+          <div class="pr"><s>32,99 €</s><b>27,49 €</b></div><span class="go">Zum Angebot ↑</span></div>
+      </a>
+      <a class="vcard" href="#" data-cta="variante-rot" data-url="https://www.lighto.de/lighto-tischlampe-solar-rot-2700k-ip44-durchmesser-13-cm">
+        <div class="ph"><img src="img/v-rot.webp" alt="Solar-Tischleuchte rot" loading="lazy"></div>
+        <div class="bd"><h3>Solar-Tischleuchte rot</h3><span class="sub">2700 K · IP44 · Ø 13 cm</span>
+          <div class="pr"><s>32,99 €</s><b>27,49 €</b></div><span class="go">Ansehen →</span></div>
+      </a>
+      <a class="vcard" href="#" data-cta="variante-beige" data-url="https://www.lighto.de/lighto-tischleuchte-solar-beige-2700k-ip44-durchmesser-13-cm">
+        <div class="ph"><img src="img/v-beige.webp" alt="Solar-Tischleuchte beige" loading="lazy"></div>
+        <div class="bd"><h3>Solar-Tischleuchte beige</h3><span class="sub">2700 K · IP44 · Ø 13 cm</span>
+          <div class="pr"><s>32,99 €</s><b>27,49 €</b></div><span class="go">Ansehen →</span></div>
+      </a>
+      <a class="vcard" href="#" data-cta="variante-grau-rauchglas" data-url="https://www.lighto.de/lighto-table-lamp-solar-grey-smoked-glass-dimmable-ip44-o-13-2-cm">
+        <div class="ph"><img src="img/v-grau-rauch.webp" alt="Tischleuchte grau mit Rauchglas" loading="lazy"><span class="tag">17% Rabatt</span></div>
+        <div class="bd"><h3>Tischleuchte grau mit Rauchglas</h3><span class="sub">Glasschirm · dimmbar · IP44 · Ø 13,2 cm</span>
+          <div class="pr"><s>30,63 €</s><b>25,52 €</b></div><span class="go">Ansehen →</span></div>
+      </a>
+      <a class="vcard" href="#" data-cta="variante-schwarz-rauchglas" data-url="https://www.lighto.de/lighto-tischlampe-solar-schwarz-rauchglas-dimmbar-ip44-o-13-2-cm">
+        <div class="ph"><img src="img/v-schwarz-rauch.webp" alt="Tischleuchte schwarz mit Rauchglas" loading="lazy"></div>
+        <div class="bd"><h3>Tischleuchte schwarz mit Rauchglas</h3><span class="sub">Glasschirm · dimmbar · IP44 · Ø 13,2 cm</span>
+          <div class="pr"><s>30,63 €</s><b>25,52 €</b></div><span class="go">Ansehen →</span></div>
+      </a>
+      <a class="vcard" href="#" data-cta="variante-grau-klarglas" data-url="https://www.lighto.de/lighto-tischleuchte-solar-grau-dimmbar-ip44-durchmesser-13-2-cm">
+        <div class="ph"><img src="img/v-grau-klar.webp" alt="Tischleuchte grau mit Klarglas" loading="lazy"></div>
+        <div class="bd"><h3>Tischleuchte grau mit Klarglas</h3><span class="sub">Glasschirm · dimmbar · IP44 · Ø 13,2 cm</span>
+          <div class="pr"><s>30,63 €</s><b>25,52 €</b></div><span class="go">Ansehen →</span></div>
+      </a>
+      <a class="vcard" href="#" data-cta="variante-braun-klarglas" data-url="https://www.lighto.de/lighto-tischleuchte-solar-braun-dimmbar-ip44-durchmesser-13-2-cm">
+        <div class="ph"><img src="img/v-braun-klar.webp" alt="Tischleuchte braun mit Klarglas" loading="lazy"></div>
+        <div class="bd"><h3>Tischleuchte braun mit Klarglas</h3><span class="sub">Glasschirm · dimmbar · IP44 · Ø 13,2 cm</span>
+          <div class="pr"><s>30,63 €</s><b>25,52 €</b></div><span class="go">Ansehen →</span></div>
+      </a>
     </div>
   </div>
 </section>

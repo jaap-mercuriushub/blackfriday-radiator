@@ -49,6 +49,17 @@
 .claims{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 18px}
 .claims span{font-size:12px;font-weight:700;letter-spacing:.04em;padding:6px 10px;border-radius:99px;background:#FEF1E2;color:#9a520a}
 .card .ico{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:#212121;color:#F59429;font-size:20px}
+.bundle{padding:100px 0;background:linear-gradient(180deg,#fff 0%,#faf2e8 100%)}
+.bundle-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+.bundle .hero-img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:20px;box-shadow:0 30px 60px -30px rgba(0,0,0,.3)}
+.bundle-thumbs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.bundle-thumbs img{aspect-ratio:1/1;object-fit:contain;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px}
+.bundle h2{font-size:clamp(26px,2.8vw,38px);line-height:1.15;margin:10px 0 14px;font-weight:800}
+.bundle .lead{color:#444;line-height:1.65;margin:0 0 18px}
+.inbox{list-style:none;padding:0;margin:0 0 22px;display:grid;gap:10px}
+.inbox li{display:flex;gap:12px;align-items:center;font-size:15px;padding:10px 14px;background:#fff;border:1px solid var(--line);border-radius:10px}
+.inbox b{min-width:30px;color:#F59429}
+@media (max-width:860px){.bundle-grid{grid-template-columns:1fr;gap:28px}}
 .care{padding:90px 0;background:#fff}
 .care .wrap{max-width:820px}
 .care ol{line-height:1.8;padding-left:22px;color:#444}
@@ -155,9 +166,40 @@
         <li>Gratis bezorging</li>
         <li>Voor 20:30 besteld, morgen in huis</li>
         <li>60 dagen niet goed, geld terug</li>
+        <li>Ook als complete set met accessoires (<a href="#set">bekijk</a>)</li>
       </ul>
       <a class="btn cta xl" data-cta="offer" href="#">Bestel nu voor €23,76</a>
       <p class="fine">Prijs incl. btw. Deal geldig t/m 30 november 2026, 23:59 uur, zolang de voorraad strekt.</p>
+    </div>
+  </div>
+</section>
+
+<section class="bundle" id="set">
+  <div class="wrap bundle-grid">
+    <div class="bundle-media reveal">
+      <img class="hero-img" src="img/set.webp" alt="Byron gietijzeren poffertjespan complete set met accessoires" loading="lazy">
+      <div class="bundle-thumbs">
+        <img src="img/set2.webp" alt="Poffertjespan met siliconen hendels, spuitfles, kwast en vorkjes" loading="lazy">
+        <img src="img/set3.webp" alt="Byron gietijzeren poffertjespan van bovenaf" loading="lazy">
+      </div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Alles in één doos</span>
+      <h2>Liever meteen compleet? Kies de complete set.</h2>
+      <p class="lead">Dezelfde Byron gietijzeren poffertjespan, met alles wat je nodig hebt om direct te beginnen. De pan heeft ruimte voor 19 poffertjes.</p>
+      <ul class="inbox">
+        <li><b>1×</b> Byron gietijzeren poffertjespan 24 cm</li>
+        <li><b>✓</b> Siliconen hendels voor de handgrepen</li>
+        <li><b>1×</b> Spuitfles om het beslag te doseren</li>
+        <li><b>1×</b> Kwast om de kuiltjes in te vetten</li>
+        <li><b>6×</b> Kleine vorkjes om te keren en te serveren</li>
+      </ul>
+      <div class="price-block">
+        <div><span class="was">€24,95</span><span class="now">€21,21</span></div>
+        <span class="save">Je bespaart 15%</span>
+      </div>
+      <a class="btn cta xl" style="margin-top:20px" data-cta="complete-set" data-url="https://www.isenvi.com/nl/byron-gietijzeren-poffertjespan-complete-set" href="#">Bekijk de complete set</a>
+      <p class="fine">Let op: in de complete set zitten siliconen hendels in plaats van de ovenwant en pannenlap.</p>
     </div>
   </div>
 </section>

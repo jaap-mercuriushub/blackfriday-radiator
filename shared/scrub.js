@@ -14,12 +14,29 @@ export function initPage(cfg) {
 
   /* ---------- CTA links with UTM ---------- */
   document.querySelectorAll('[data-cta]').forEach(a => {
-    const u = new URL(cfg.productUrl);
+    const u = new URL(a.dataset.url || cfg.productUrl);   // data-url: other product (variant cards)
     u.searchParams.set('utm_source', 'bf-landing');
     u.searchParams.set('utm_medium', 'landingpage');
     u.searchParams.set('utm_campaign', 'blackfriday2026');
     u.searchParams.set('utm_content', a.dataset.cta);
     a.href = u.toString();
+  });
+
+  /* ---------- variant sliders: prev/next buttons ---------- */
+  document.querySelectorAll('[data-slider]').forEach(wrap => {
+    const track = wrap.querySelector('.slider');
+    const step = () => (track.firstElementChild ? track.firstElementChild.offsetWidth + 16 : 300);
+    const prev = wrap.querySelector('[data-prev]'), next = wrap.querySelector('[data-next]');
+    const sync = () => {
+      if (prev) prev.disabled = track.scrollLeft < 8;
+      if (next) next.disabled = track.scrollLeft + track.clientWidth > track.scrollWidth - 8;
+      const nav = wrap.querySelector('.slider-nav');
+      if (nav) nav.style.visibility = track.scrollWidth > track.clientWidth + 8 ? 'visible' : 'hidden';
+    };
+    prev && prev.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+    next && next.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+    track.addEventListener('scroll', sync, { passive: true });
+    addEventListener('resize', sync); sync();
   });
 
   /* ---------- countdown ---------- */
